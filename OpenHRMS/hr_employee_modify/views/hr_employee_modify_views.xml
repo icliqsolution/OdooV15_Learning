@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_previous_form" model="ir.ui.view">
+        <field name="name">hr.previous.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="previous_company" string="Previous Company">
+                    <group>
+                        <field name="previouscompany_id" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_previous_company_form" model="ir.ui.view">
+        <field name="name">hr.previous.company.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='study_school']" position="after">
+                <field name="education_details_id" />              
+            </xpath>
+        </field>
+    </record>
+
+    <!-- This Code using by Skill -->
+    <record id="hr_technology_form_view" model="ir.ui.view">
+        <field name="name">hr.technology.form.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="name" string="Technical Skill">
+                    <group>
+                        <group string="skills">
+                            <field name="technology_id" widget="many2many_tags" />
+                            <field name="frameworks_id" widget="many2many_tags" />
+                            <field name="tools_id" widget="many2many_tags" />
+                            <field name="server_id" widget="many2many_tags" />
+                            <field name="os_id" widget="many2many_tags" />
+                            <field name="project_id" widget="many2many_tags" />
+                        </group>
+                            <group string="skills">
+                                <field name="database_id" widget="many2many_tags" />
+                                <field name="deployment_id" widget="many2many_tags" />
+                                <field name="version_id" widget="many2many_tags" />
+                                <field name="dev_ops_id" widget="many2many_tags" />
+                                <field name="monitoring_id" widget="many2many_tags" />
+                                <field name="other_id" widget="many2many_tags" />
+                            </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

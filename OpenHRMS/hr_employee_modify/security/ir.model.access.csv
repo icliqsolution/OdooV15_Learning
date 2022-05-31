@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_emp_technology_hr,emp_technology_hr,model_emp_technology_hr,base.group_user,1,1,1,1
+access_frameworks_hr,frameworks_hr,model_frameworks_hr,base.group_user,1,1,1,1
+access_tools_hr,tools_hr,model_tools_hr,base.group_user,1,1,1,1
+access_database_hr,database_hr,model_database_hr,base.group_user,1,1,1,1
+access_deployment_tools_hr,deployment_tools_hr,model_deployment_tools_hr,base.group_user,1,1,1,1
+access_version_control_hr,version_control_hr,model_version_control_hr,base.group_user,1,1,1,1
+access_previous_company,previous_company,model_previous_company,base.group_user,1,1,1,1
+access_server_hr,server_hr,model_server_hr,base.group_user,1,1,1,1
+access_development_ops_tool_hr,development_ops_tool_hr,model_development_ops_tool_hr,base.group_user,1,1,1,1
+access_opeting_system_hr,opeting_system_hr,model_opeting_system_hr,base.group_user,1,1,1,1
+access_monitoring_tool_hr,monitoring_tool_hr,model_monitoring_tool_hr,base.group_user,1,1,1,1
+access_project_management_hr,project_management_hr,model_project_management_hr,base.group_user,1,1,1,1
+access_other_tools_technologies_hr,other_tools_technologies_hr,model_other_tools_technologies_hr,base.group_user,1,1,1,1
+access_education_employee,education_employee,model_education_employee,base.group_user,1,1,1,1

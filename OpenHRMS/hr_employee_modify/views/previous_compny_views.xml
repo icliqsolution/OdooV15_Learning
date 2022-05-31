@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_previous_form" model="ir.ui.view">
+			<field name="name">view.previous.form</field>
+			<field name="model">previous.company</field>
+			<field name="arch" type="xml">
+				<form string="previous company">
+					<sheet>
+						<group>
+							
+                            <field name="per_company_name" />
+                            <field name="per_company_location" />
+                            <field name="per_start_date" />
+                            <field name="per_end_date" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="view_previous_list" model="ir.ui.view">
+			<field name="name">view.previous.list</field>
+			<field name="model">previous.company</field>
+			<field name="arch" type="xml">
+				<tree string="previous company" editable="bottom">
+					<!-- <field name="employee_id" readonly="1" /> -->
+                    <field name="per_company_name" />
+                    <field name="per_company_location" />
+                    <field name="per_start_date" />
+                    <field name="per_end_date" />
+				</tree>
+			</field>
+		</record>
+		<record id="open_previous_form" model="ir.actions.act_window">
+			<field name="name">previous company</field>
+			<field name="res_model">previous.company</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem
+                    id="menu_config_technical_skill_types"
+                    name="Previous Company "
+                    action="open_previous_form"
+                    parent="hr.menu_config_plan"
+                    groups="base.group_no_one"
+                    sequence="99"/>
+	</data>
+</odoo>

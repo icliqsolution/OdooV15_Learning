@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_eduction_form" model="ir.ui.view">
+			<field name="name">view.eduction.form</field>
+			<field name="model">education.employee</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+                            <field name="certificates" />
+                            <field name="study_fields" />
+                            <field name="study_schools" />
+                            <field name="grades" />
+                            <field name="passing_years" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="view_eduction_list" model="ir.ui.view">
+			<field name="name">view.eduction.list</field>
+			<field name="model">education.employee</field>
+			<field name="arch" type="xml">
+				<tree editable="bottom">
+                    <field name="certificates" />
+                    <field name="study_fields" />
+                    <field name="study_schools" />
+                    <field name="grades" />
+                    <field name="passing_years" />
+				</tree>
+			</field>
+		</record>
+		<record id="open_eduction_form" model="ir.actions.act_window">
+			<field name="name">Education</field>
+			<field name="res_model">education.employee</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem
+                    id="menu_config_eduction_skills"
+                    name="Eductions"
+                    action="open_eduction_form"
+                    parent="hr.menu_config_plan"
+                    groups="base.group_no_one"
+                    sequence="99"/>
+	</data>
+</odoo>

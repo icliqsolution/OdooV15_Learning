@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_tools_form" model="ir.ui.view">
+			<field name="name">tools.form</field>
+			<field name="model">tools.hr</field>
+			<field name="arch" type="xml">
+				<form string="Employee Tools">
+					<sheet>
+						<group>
+							<field name="name" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="view_tools_list" model="ir.ui.view">
+			<field name="name">tools.list</field>
+			<field name="model">tools.hr</field>
+			<!-- <field eval="8" name="priority"/> -->
+			<field name="arch" type="xml">
+				<tree string="Employees Tools" editable="bottom">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		<record id="open_tools_form" model="ir.actions.act_window">
+			<field name="name">Employee Tools</field>
+			<field name="res_model">tools.hr</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem
+                    id="menu_config_tools_types"
+                    name="Tools"
+                    action="open_tools_form"
+                    parent="hr.menu_config_plan"
+                    groups="base.group_no_one"
+                    sequence="99"/>
+	</data>
+</odoo>

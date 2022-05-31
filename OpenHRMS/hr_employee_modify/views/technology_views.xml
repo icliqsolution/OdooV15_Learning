@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_technology_form" model="ir.ui.view">
+			<field name="name">emp.technology.form</field>
+			<field name="model">emp.technology_hr</field>
+			<field name="arch" type="xml">
+				<form string="Employee Technology">
+					<sheet>
+						<group>
+							<field name="name" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="view_technology_list" model="ir.ui.view">
+			<field name="name">emp.technology.list</field>
+			<field name="model">emp.technology_hr</field>
+			<!-- <field eval="8" name="priority"/> -->
+			<field name="arch" type="xml">
+				<tree string="Employees Technology" editable="bottom">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		<record id="open_technology_form" model="ir.actions.act_window">
+			<field name="name">Employee Technology</field>
+			<field name="res_model">emp.technology_hr</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem
+                    id="menu_config_technical_skill_types"
+                    name="Technology "
+                    action="open_technology_form"
+                    parent="hr.menu_config_plan"
+                    groups="base.group_no_one"
+                    sequence="99"/>
+	</data>
+</odoo>

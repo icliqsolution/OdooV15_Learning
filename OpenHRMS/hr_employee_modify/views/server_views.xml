@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_server_form" model="ir.ui.view">
+			<field name="name">view.server.form</field>
+			<field name="model">server.hr</field>
+			<field name="arch" type="xml">
+				<form string="server">
+					<sheet>
+						<group>
+							<field name="name" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="view_server_list" model="ir.ui.view">
+			<field name="name">view.
+			server.list</field>
+			<field name="model">server.hr</field>
+			<!-- <field eval="8" name="priority"/> -->
+			<field name="arch" type="xml">
+				<tree string="server" editable="bottom">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+		<record id="open_server_form" model="ir.actions.act_window">
+			<field name="name">server</field>
+			<field name="res_model">server.hr</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <menuitem
+                    id="menu_config_server_types"
+                    name="server"
+                    action="open_server_form"
+                    parent="hr.menu_config_plan"
+                    groups="base.group_no_one"
+                    sequence="99"/>
+	</data>
+</odoo>
